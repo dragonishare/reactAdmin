@@ -71,7 +71,8 @@
     "less-loader": "^4.1.0",
     "lint-staged": "^7.0.5",
     "prettier": "^1.12.1",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-devtools-extension": "^2.13.2",
+    "redux-logger": "^3.0.6"
   },
   "jest": {
     "collectCoverageFrom": ["src/**/*.{js,jsx,mjs}"],

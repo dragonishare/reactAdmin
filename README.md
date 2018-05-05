@@ -56,7 +56,11 @@ yarn 常用命令如上
  开发环境的依赖安装
  ```
  yarn add babel-plugin-import less less-loader --dev
+ yarn add redux-logger redux-devtools-extension --dev
  ```
+
+[reduxDevTools](https://github.com/yellowfrogCN/reduxDevTools/blob/master/README.md)
+
 用到 less 的变量覆盖功能，同时还需要less-loader加载less样式
 
 ### 通过`yarn run eject`命令把create-react-app所有内建的配置暴露出来
