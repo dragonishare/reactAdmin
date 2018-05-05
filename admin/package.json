@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.5.0",
     "history": "^4.7.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
+    "moment-timezone": "^0.5.16",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
@@ -21,6 +25,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.7.0",
+    "less": "^3.0.2",
+    "less-loader": "^4.1.0",
     "redux-devtools-extension": "^2.13.2"
   }
 }

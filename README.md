@@ -22,8 +22,12 @@ cd react-redux-example
 
  ```
  yarn add packagenameA // 安装packagenameA，安装 运行环境的依赖
+
  yarn install //根据package.json安装全部的依赖
+
  yarn add --dev packagenameB //安装开发环境的依赖
+
+ yarn remove packagenameC //卸载指定包packagenameC
  ```
 
 yarn 常用命令如上
@@ -45,8 +49,35 @@ yarn 常用命令如上
 
 ## 其他依赖
 
+ 运行环境的依赖安装
  ```
+ yarn add lodash moment moment-timezone antd
+ ```
+ 开发环境的依赖安装
+ ```
+ yarn add babel-plugin-import less less-loader --dev
+ ```
+用到 less 的变量覆盖功能，同时还需要less-loader加载less样式
+
+### 通过`yarn run eject`命令把create-react-app所有内建的配置暴露出来
 
  ```
+ yarn run eject //暴露出配置信息
+ ```
 
+
+添加antd之后，装babel-plugin-import插件，实现按需加载提高性能，但是需要对webpack.config.dev.js做修改：
+
+
+添加less,less-loader之后，同样需要做修改：
+
+
+### 对 create-react-app 进行自定义配置without ejecting
+
+ ```
+ yarn add react-app-rewired --dev
+ ```
+
+Override create-react-app webpack configs without ejecting
+https://github.com/timarney/react-app-rewired
 
