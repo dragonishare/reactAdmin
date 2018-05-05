@@ -214,6 +214,35 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
  proxy: "http://xxx.xxx",
  ```
 
+#### 自动格式化代码
+[formatting-code-automatically](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#formatting-code-automatically)
+
+ ```
+ yarn add husky lint-staged prettier --dev
+ ```
+
+* husky makes it easy to use githooks as if they are npm scripts.
+* lint-staged allows us to run scripts on staged files in git. See this blog post about lint-staged to learn more about it.
+* prettier is the JavaScript formatter we will run before commits.
+添加完之后，package.json做如下配置
+
+ ```
+
+ "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+
+ ```
+
 ### 对 create-react-app 进行自定义配置without ejecting
 
  ```
