@@ -256,4 +256,27 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 Override create-react-app webpack configs without ejecting
 https://github.com/timarney/react-app-rewired
 
+## 目录结构组织
+使用ducks方式组织redux目录结构
+https://www.jianshu.com/p/324fd1c124ad
+https://segmentfault.com/a/1190000010915166
+src下
+redux: redux相关的内容，包括store.js,以及ducks模式下的模块Modules
+ + store.js:
+ + modules: 一种模组化Redux的代码组识方法，它是把reducers, constants, action types与actions打包成模组来用。
+
+ 把相关的reducers，action creators和Actions，Types（action的type属性集合，常量）都放在一个单独的文件中，而不是分开放在多个文件中，这样修改一个功能时候直接在一个文件中修改就可以。文件命名时根据容器组件来命名
+
+
+
+common: 应用公用配置，如导航信息，菜单项，面包屑，路由配置等，也可以考虑把整个common当成一个组件放到components里边
+ + menu.js/aside_menu.js: 菜单项
+ + menu_items.js: 菜单配置信息（如果菜单比较多，可考虑把需要配置的信息拆出来，在menu.js/aside_menu.js进行引用，然后遍历）
+ + router.js: 路由配置（一般与菜单项对应）
+ + breadcrumb.js: 面包屑
+components: 业务通用组件
+pages: 业务页面，存放被 connect 后的 React 容器组件，最典型的就是 App，即应用组件。
+services: 后台接口服务
+ + request.js 请求
+ + api.js api接口地址配置
 
