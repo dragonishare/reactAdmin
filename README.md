@@ -246,6 +246,7 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
   },
 
  ```
+格式化插件配置 参数requirePragma设为true，避免数组和（）换行时合并
 
 ### 对 create-react-app 进行自定义配置without ejecting
 
