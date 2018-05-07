@@ -10,7 +10,10 @@ export const history = createHistory();
 
 const initialState = {};
 const enhancers = [];
-const middleware = [reduxThunk, routerMiddleware(history)];
+const middleware = [
+    reduxThunk,
+    routerMiddleware(history)
+];
 
 if (process.env.NODE_ENV === "development") {
   const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__;
@@ -20,8 +23,15 @@ if (process.env.NODE_ENV === "development") {
   }
 }
 
-const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
+const composedEnhancers = compose(
+    applyMiddleware(...middleware),
+    ...enhancers
+);
 
-const store = createStore(rootReducer, initialState, composedEnhancers);
+const store = createStore(
+    rootReducer,
+    initialState,
+    composedEnhancers
+);
 
 export default store;
