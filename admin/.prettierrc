@@ -6,6 +6,6 @@
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
   "arrowParens": "avoid",
-  "requirePragma": false,
+  "requirePragma": true,
   "proseWrap": "preserve",
 }
