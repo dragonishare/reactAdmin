@@ -62,7 +62,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,json,css}": ["prettier --write --no-bracket-spacing", "git add"]
+    "*.{js,jsx,json,css}": ["prettier --no-bracket-spacing", "git add"]
   },
   "devDependencies": {
     "babel-plugin-import": "^1.7.0",
