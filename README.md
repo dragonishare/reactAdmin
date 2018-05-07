@@ -262,9 +262,10 @@ https://www.jianshu.com/p/324fd1c124ad
 https://segmentfault.com/a/1190000010915166
 src下
 redux: redux相关的内容，包括store.js,以及ducks模式下的模块Modules
- + store.js:
+ + store.js: 初始化全局唯一store
  + modules: 一种模组化Redux的代码组识方法，它是把reducers, constants, action types与actions打包成模组来用。
-
+   - 各模组文件包含actionTypes, actions, reducers
+   - index.js: 合并模组文件（也相当于是合并reducers）
  把相关的reducers，action creators和Actions，Types（action的type属性集合，常量）都放在一个单独的文件中，而不是分开放在多个文件中，这样修改一个功能时候直接在一个文件中修改就可以。文件命名时根据容器组件来命名
 
 
