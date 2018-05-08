@@ -262,11 +262,12 @@ https://github.com/timarney/react-app-rewired
 https://www.jianshu.com/p/324fd1c124ad
 https://segmentfault.com/a/1190000010915166
 src下
+assets: 静态资源，如图标、字体等
 redux: redux相关的内容，包括store.js,以及ducks模式下的模块Modules
- + store.js: 初始化全局唯一store
- + modules: 一种模组化Redux的代码组识方法，它是把reducers, constants, action types与actions打包成模组来用。
+ + Store.js: 初始化全局唯一store
+ + Modules: 一种模组化Redux的代码组识方法，它是把reducers, constants, action types与actions打包成模组来用。
    - 各模组文件包含actionTypes, actions, reducers
-   - index.js: 合并模组文件（也相当于是合并reducers）
+   - Reducers.js: 合并模组文件（也相当于是合并reducers）
  把相关的reducers，action creators和Actions，Types（action的type属性集合，常量）都放在一个单独的文件中，而不是分开放在多个文件中，这样修改一个功能时候直接在一个文件中修改就可以。文件命名时根据容器组件来命名
 
 
@@ -277,8 +278,14 @@ common: 应用公用配置，如导航信息，菜单项，面包屑，路由配
  + router.js: 路由配置（一般与菜单项对应）
  + breadcrumb.js: 面包屑
 components: 业务通用组件
-pages: 业务页面，存放被 connect 后的 React 容器组件，最典型的就是 App，即应用组件。
 services: 后台接口服务
  + request.js 请求
  + api.js api接口地址配置
+
+
+index.js: 整个项目的入口文件，主要用来绑定全局store以及挂载**组件入口文件**
+
+pages: 业务页面，存放被 connect 后的 React 容器组件，最典型的就是 App，即应用组件。组件文件名称采用大驼峰命名，组件命名大驼峰，组件属性命名小驼峰
+ + App.js: 组件入口文件，
+
 

@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { routerMiddleware } from "react-router-redux";
 import reduxThunk from "redux-thunk";
 import createHistory from "history/createBrowserHistory";
-import rootReducer from "./modules";
+import rootReducer from "./modules/Reducers";
 
 //官方推荐线上环境时用createBrowserHistory，开发环境的时候可以使用createHashHistory，hash方式会在URL加上#
 //

@@ -7,7 +7,7 @@ import {
   incrementAsync,
   decrement,
   decrementAsync
-} from '../../redux/modules/counter';
+} from '../../redux/modules/Counter';
 
 class Home extends React.Component {
 
