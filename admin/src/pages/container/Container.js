@@ -27,6 +27,7 @@ class Container extends Component {
       <div>
         <Header {...this.state} />
         <div className='main-layout'>
+          {console.log('这里面时什么',this.props.children)}
           {this.props.children}
         </div>
       </div>
