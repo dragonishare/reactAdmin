@@ -62,7 +62,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,json,css}": ["prettier --write", "git add"]
+    "*.{js,jsx,json,css,less}": ["prettier --write", "git add"]
   },
   "devDependencies": {
     "babel-plugin-import": "^1.7.0",

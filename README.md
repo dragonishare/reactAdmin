@@ -33,7 +33,7 @@ cd react-redux-example
 yarn 常用命令如上
 
  ```
- yarn add redux react-redux redux-thunk superagent react-router-dom react-router-redux@next history redux-devtools-extension
+ yarn add redux react-redux redux-thunk superagent react-router-dom react-router-redux@next history
 
  ```
 
