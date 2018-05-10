@@ -72,28 +72,31 @@ class NormalLoginForm extends React.Component {
                     <FormItem>
                         {getFieldDecorator('email', {rules: [{ required: true, message: 'Please input your Email!' }],
                         })(
-                            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Email" className="login-form-input" />
+                            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Please enter the registered email" className="login-form-input" />
                         )}
                     </FormItem>
                     <FormItem>
                         {getFieldDecorator('password', {
                             rules: [{ required: true, message: 'Please input your Password!'}],
                         })(
-                            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" className="login-form-input" />
+                            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Please enter the password" className="login-form-input" />
                         )}
                     </FormItem>
-                    <FormItem>
-                        {getFieldDecorator('remember', {
-                            valuePropName: 'checked', initialValue: true,
-                        })(
-                            <Checkbox>Remember me</Checkbox>
-                        )}
-                        <a className="login-form-forgot" href="">Forgot password</a>
-                        <Button type="primary" htmlType="submit" className="login-form-button">Log in</Button>
-                        Or <a href="">register now!</a>
+                    <FormItem className="login-form-operation">
+                        <div className="login-form-password">
+                            {getFieldDecorator('remember', {
+                                valuePropName: 'checked', initialValue: true,
+                            })(
+                                <Checkbox>Remember me</Checkbox>
+                            )}
+                            <a className="login-form-forgot" href="">Forgot password？</a>
+                        </div>
+                        <Button type="primary" htmlType="submit" className="login-form-button">Log In</Button>
+
+                        <a href="" className="login-form-register">Register a new account</a>
                     </FormItem>
 
-                    <FormItem>
+                    <FormItem style={{display:'none'}}>
                         <div className='field-box'>
                           <input type='text' name='email' value={userInfo.email} onChange={this.handleChange.bind(this, 'email')} placeholder='输入账号' />
                         </div>
