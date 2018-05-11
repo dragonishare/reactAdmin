@@ -61,6 +61,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "precommit": "lint-staged"
   },
+  "homepage": ".",
   "lint-staged": {
     "*.{js,jsx,json,css,less}": ["prettier --write", "git add"]
   },

@@ -257,6 +257,20 @@ test: /\.css$/ 的 use 数组配置增加 less-loader
 Override create-react-app webpack configs without ejecting
 https://github.com/timarney/react-app-rewired
 
+## 部署
+
+`yarn run build`之后，是绝对路径，修改成相对路径,给package.json添加`"homepage": ".",`
+ ```
+ //package.json
+ "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "precommit": "lint-staged"
+  },
+  "homepage": ".",
+```
+
 ## 目录结构组织
 使用ducks方式组织redux目录结构
 https://www.jianshu.com/p/324fd1c124ad
